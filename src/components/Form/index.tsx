@@ -1,23 +1,44 @@
 import './index.scss';
-import search from '../../assets/img/search.svg';
 import filter from '../../assets/img/filter.svg';
 import arrow from '../../assets/img/arrow.svg';
 import fetchStarWars from '../../services/api';
 import { useState } from 'react';
 import PlanetDetails from '../PlanetDetails';
+import SearchButton from '../Button';
 
-type Status = 'buscando' | 'search';
-
-const statusMessages = {
-  buscando: 'Buscando...',
-  search: 'Search',
-};
+type Status = 'Buscando...' | 'search';
 
 type FormProps = {
   setMarsImageVisible: (isVisible: boolean) => void;
 };
 
-export default function Form({setMarsImageVisible} : FormProps) {
+const planetOptions = [
+  'Tatooine',
+  'Naboo',
+  'Kamino',
+  'Hoth',
+  'Endor',
+  'Dagobah',
+  'Coruscant',
+  'Bespin',
+  'Alderaan',
+  'Yavin IV',
+];
+
+const populationOptions = [
+  'Unknown',
+  '1.000',
+  '7.200',
+  '200.000',
+  '6.000.000',
+  '30.000.000',
+  '1.000.000.000',
+  '2.000.000.000',
+  '4.500.000.000',
+  '1.000.000.000.000',
+];
+
+export default function Form({ setMarsImageVisible }: FormProps) {
 
   const [planetName, setPlanetName] = useState('');
   const [searchedPlanetId, setSearchedPlanetId] = useState(null);
@@ -26,7 +47,7 @@ export default function Form({setMarsImageVisible} : FormProps) {
   const [formVisible, setFormVisible] = useState(true);
 
   async function handleSearch(e: { preventDefault: () => void; }) {
-    setStatus('buscando');
+    setStatus('Buscando...');
     e.preventDefault();
 
     const response = await fetchStarWars();
@@ -58,16 +79,7 @@ export default function Form({setMarsImageVisible} : FormProps) {
             value={planetName}
             onChange={(e) => setPlanetName(e.target.value)}
           />
-          <button
-            onClick={handleSearch}
-            className='btnSearch'>
-            {status === 'search' ? (
-              <>
-                <img src={search} alt="ícone de procura" />
-                Search
-              </>
-            ) : statusMessages[status]}
-          </button>
+          <SearchButton onClick={handleSearch} status={status} />
           <div className='filterContainer'>
             <div className='boxTopFilter'>
               <img src={filter} alt="" />
@@ -78,18 +90,13 @@ export default function Form({setMarsImageVisible} : FormProps) {
               <select
                 value={planetName}
                 onChange={(e) => setPlanetName(e.target.value)}
-                name="planetName">
-                <option value="">Escolha um</option>
-                <option value="Tatooine">Tatooine</option>
-                <option value="Naboo">Naboo</option>
-                <option value="Kamino">Kamino</option>
-                <option value="Hoth">Hoth</option>
-                <option value="Endor">Endor</option>
-                <option value="Dagobah">Dagobah</option>
-                <option value="Coruscant">Coruscant</option>
-                <option value="Bespin">Bespin</option>
-                <option value="Alderaan">Alderaan</option>
-                <option value="Yavin">Yavin IV</option>
+                name='planetName'>
+                <option value=''>Escolha um</option>
+                {planetOptions.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
               <label htmlFor="planetName">
                 <img src={arrow} alt="" />
@@ -100,24 +107,19 @@ export default function Form({setMarsImageVisible} : FormProps) {
               <select
                 value={planetName}
                 onChange={(e) => setPlanetName(e.target.value)}
-                name="PopulationPlanet">
-                <option value="Dagobah">Unknown</option>
-                <option value="Yavin">1.000</option>
-                <option value="Hoth">7.200</option>
-                <option value="Tatooine">200.000</option>
-                <option value="Bespin">6.000.000</option>
-                <option value="Endor">30.000.000</option>
-                <option value="Kamino">1.000.000.000</option>
-                <option value="Alderaan">2.000.000.000</option>
-                <option value="Naboo">4.500.000.000</option>
-                <option value="Coruscant">1.000.000.000.000</option>
+                name='PopulationPlanet'>
+                {populationOptions.map((option, index) => (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
-
               <label htmlFor="PopulationPlanet">
                 <img src={arrow} alt="" />
                 Population
               </label>
             </div>
+            
           </div>
         </form>
       )}

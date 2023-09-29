@@ -30,24 +30,6 @@
     font-size: 14px;
   }
 
-  .btnSearch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #DE1212;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #FFF;
-
-    img {
-      margin-right: 4px;
-    }
-  }
-
-  .btnSearch:hover {
-    border: 1px solid #FFF;
-  }
-
   .filterContainer {
     display: flex;
     align-self: center;

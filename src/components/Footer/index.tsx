@@ -8,15 +8,15 @@ export default function Footer() {
       <button
         onClick={() => window.location.reload()}
         className='btnReturn'>
-        <img src={arrow} alt="" />
+        <img src={arrow} alt="Seta do botão para voltar" />
         Voltar
       </button>
       <footer>
-      <p>STARUARS LTDA | CNPJ: 77.777.777/0007-07 | 2023 | Todos os direitos reservados</p>
-      <img
-        className='StarImage'
-      src={imgFooter} alt="" />
-    </footer>
+        <p>STARWARS LTDA | CNPJ: 77.777.777/0007-07 | 2023 | Todos os direitos reservados</p>
+        <img
+          className='StarImage'
+          src={imgFooter} alt="Logo Star Wars" />
+      </footer>
     </>
   );
 } 

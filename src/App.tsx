@@ -2,7 +2,7 @@ import './assets/scss/App.scss';
 import title from './assets/img/title.svg';
 import mars from './assets/img/imgMars.svg';
 import spaceship from './assets/img/spaceship.svg';
-import spaceshipBig from './assets/img/spaceshipBig.svg'
+import spaceshipBig from './assets/img/spaceshipBig.svg';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import { useEffect, useState } from 'react';
@@ -45,7 +45,6 @@ function App() {
               src={isLargeScreen ? spaceshipBig : spaceship}
             />
           </div>
-
           <Form setMarsImageVisible={setMarsImageVisible} />
         </div>
       </div>
