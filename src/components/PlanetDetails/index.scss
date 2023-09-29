@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 98;
     height: 520px;
-    overflow: hidden;
+    overflowX: hidden;
   
     .btnReturn:hover {
       background: #FFFFFF;
@@ -105,6 +105,28 @@
       }
     }
   }
+
+  .btnReturn {
+    color: #FFFFFF;
+    width: 100px;
+    z-index: 990;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    top: 75px;
+    //right: -60%;
+  
+    img {
+      rotate: 90deg;
+      margin-right: 5px;
+    }
+  }
 }
 
 @media screen and (min-width: 720px){
@@ -114,30 +136,32 @@
     position: absolute;
     z-index: 98;
     height: 480px;
-    overflow: hidden;
+    overflowX: hidden;
     top: 50%;
     left: 30%;
-    
     transform: translateY(-50%);
-  
+
     .btnReturn {
-      color: #FFFFFF;
-      width: 100px;
-      z-index: 100;
-      background: #000;
-      border: none;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-self: flex-end;
-      align-items: center;
-      padding: 5px;
-  
-      img {
-        rotate: 90deg;
-        margin-right: 5px;
-      }
+    color: #FFFFFF;
+    width: 100px;
+    z-index: 100;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px 5px 0px;
+    background: rgba(0, 0, 0, 0.678);
+    position: relative;
+    top: 140px;
+    left: 80%;
+
+    img {
+      rotate: 90deg;
+      margin-right: 5px;
     }
+  }
   
     .btnReturn:hover {
       background: #FFFFFF;
@@ -248,3 +272,4 @@
     }
   }
 }
+

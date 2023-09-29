@@ -16,27 +16,6 @@ footer {
   }
 }
 
-.btnReturn {
-  color: #FFFFFF;
-  width: 100px;
-  z-index: 100;
-  background: none;
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
-  align-items: center;
-  padding: 5px;
-  position: relative;
-  top: -60px;
-  right: -60%;
-
-  img {
-    rotate: 90deg;
-    margin-right: 5px;
-  }
-}
 
 @media screen and (min-width: 720px){
   footer {
@@ -53,23 +32,4 @@ footer {
     }
   }
 
-  .btnReturn {
-    color: #FFFFFF;
-    width: 100px;
-    z-index: 100;
-    background: none;
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    position: relative;
-    background: rgba(0, 0, 0, 0.678)ck;
-
-    img {
-      rotate: 90deg;
-      margin-right: 5px;
-    }
-  }
 }

@@ -116,9 +116,17 @@ export default function Form({ setMarsImageVisible }: FormProps) {
         </form>
       )}
       {searched && searchedPlanetId === null && (
-        <div className='boxAlert'>
-          <p className='alert'>No planet found with the specified name.</p>
-        </div>
+        <>
+          <div className='boxAlert'>
+            <p className='alert'>No planet found with the specified name.</p>
+          </div>
+          <button
+            onClick={() => window.location.reload()}
+            className='btnReturn'>
+            <img src={arrow} alt="Seta do botão para voltar" />
+            Voltar
+          </button>
+        </>
       )}
       {searchedPlanetId !== null && (
         <PlanetDetails planet={searchedPlanetId} />

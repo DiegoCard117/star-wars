@@ -4,7 +4,7 @@ import terreno from '../../assets/img/terrain.svg';
 import people from '../../assets/img/population.svg';
 import resident from '../../assets/img/people.svg';
 import film from '../../assets/img/films.svg';
-
+import arrow from '../../assets/img/arrow.svg';
 import { useState, useEffect } from 'react';
 
 interface Planet {
@@ -159,6 +159,12 @@ export default function PlanetDetails({ planet }: { planet: Planet; }) {
         )}
       </div>
         
+      <button
+        onClick={() => window.location.reload()}
+        className='btnReturn'>
+        <img src={arrow} alt="Seta do botão para voltar" />
+        Voltar
+      </button>
       </div>
     </div>
   );
