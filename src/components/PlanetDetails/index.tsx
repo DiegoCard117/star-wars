@@ -122,30 +122,42 @@ export default function PlanetDetails({ planet }: { planet: Planet; }) {
             <h2>Residents:</h2>
           </div>
           {isLoading ? (
-            <p>Carregando...</p>
-          ) : (
-            <>
-              {residentDetails.map((resident, index) => (
-                <span key={index}>{resident.name}, </span>
-              ))}
-            </>
-          )}
-        </div>
+          <p>Carregando...</p>
+        ) : (
+          <>
+            {residentDetails.length === 0 ? (
+              <p>No residents found.</p>
+            ) : (
+              <>
+                {residentDetails.map((resident, index) => (
+                  <span key={index}>{resident.name}, </span>
+                ))}
+              </>
+            )}
+          </>
+        )}
+      </div>
         <div className='boxQuantidades'>
           <div className='titleQuantidade'>
             <img src={film} alt="" />
             <h2>Films {`(${filmDetails.length})`}:</h2>
           </div>
           {isLoading ? (
-            <p>Carregando...</p>
-          ) : (
-            <>
-              {filmDetails.map((films, index) => (
-                <span key={index}>{films.title}, </span>
-              ))}
-            </>
-          )}
-        </div>
+          <p>Carregando...</p>
+        ) : (
+          <>
+            {filmDetails.length === 0 ? (
+              <p>No films found.</p>
+            ) : (
+              <>
+                {filmDetails.map((films, index) => (
+                  <span key={index}>{films.title}, </span>
+                ))}
+              </>
+            )}
+          </>
+        )}
+      </div>
         
       </div>
     </div>
