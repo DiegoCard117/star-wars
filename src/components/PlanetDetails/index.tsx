@@ -41,7 +41,7 @@ const PlanetImages: PlanetImageMapping = {
   Alderaan: 'https://cryptospro.com.br/planetas/planeta_0009_alderaan.png',
 };
 
-export function PlanetDetails({ planet }: { planet: Planet; }) {
+export default function PlanetDetails({ planet }: { planet: Planet; }) {
   const { name, climate, terrain, population, residents, films } = planet;
   const [residentDetails, setResidentDetails] = useState<ResidentDetails[]>([]);
   const [filmDetails, setFilmDetails] = useState<FilmDetails[]>([]);
