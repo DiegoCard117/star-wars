@@ -25,19 +25,6 @@ const planetOptions = [
   'Yavin IV',
 ];
 
-const populationOptions = [
-  'Unknown',
-  '1.000',
-  '7.200',
-  '200.000',
-  '6.000.000',
-  '30.000.000',
-  '1.000.000.000',
-  '2.000.000.000',
-  '4.500.000.000',
-  '1.000.000.000.000',
-];
-
 export default function Form({ setMarsImageVisible }: FormProps) {
 
   const [planetName, setPlanetName] = useState('');
@@ -107,19 +94,24 @@ export default function Form({ setMarsImageVisible }: FormProps) {
               <select
                 value={planetName}
                 onChange={(e) => setPlanetName(e.target.value)}
-                name='PopulationPlanet'>
-                {populationOptions.map((option, index) => (
-                  <option key={index} value={option}>
-                    {option}
-                  </option>
-                ))}
+                name="PopulationPlanet">
+                <option value="Dagobah">Unknown</option>
+                <option value="Yavin">1.000</option>
+                <option value="Hoth">7.200</option>
+                <option value="Tatooine">200.000</option>
+                <option value="Bespin">6.000.000</option>
+                <option value="Endor">30.000.000</option>
+                <option value="Kamino">1.000.000.000</option>
+                <option value="Alderaan">2.000.000.000</option>
+                <option value="Naboo">4.500.000.000</option>
+                <option value="Coruscant">1.000.000.000.000</option>
               </select>
               <label htmlFor="PopulationPlanet">
                 <img src={arrow} alt="" />
                 Population
               </label>
             </div>
-            
+
           </div>
         </form>
       )}
