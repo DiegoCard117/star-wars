@@ -1,0 +1,250 @@
+@media screen and (max-width: 720px){
+  .containerDetails {
+    width: 90%;
+    position: absolute;
+    z-index: 98;
+    height: 520px;
+    overflow: hidden;
+  
+    .btnReturn:hover {
+      background: #FFFFFF;
+      color: #000;
+    }
+    
+    .content {
+      padding: 20px 10px;
+      background: #FFF;
+      height: 90%;
+      border-radius: 10px;
+      display:flex ;
+      flex-direction: column;
+      align-items: start;
+      
+      .details {
+        width: 100%;
+        display: flex;
+        margin-bottom: 25px;
+  
+        .detailsPlanet {
+          display: flex;
+          width: 30%;
+          flex-direction: row;
+          align-items: center;
+  
+          .PlanetImg {
+            width: 82px;
+            height: 82px;
+            margin-right: 10px;
+            margin-top: -100px;
+          }
+  
+          h1 {
+            font-size: 24px;
+          }
+        }
+  
+        .boxCondition {
+          display: flex;
+          flex-direction: column;
+          align-self: flex-end;
+  
+          .boxTitle {
+            h1 {
+              font-size: 18px;
+            }
+          }
+  
+          .ConditionPlanet {
+            display: flex;
+            margin: 20px 0px 00px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+  
+            img {
+              margin-right: 10px;
+              display: flex;
+            }
+          }
+  
+          .title {
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 14px;
+          }
+        }
+      }
+  
+      .boxQuantidades {
+        background: #F1F1F1;
+        padding: 10px;
+        border-radius: 10px;
+        width: 94%;
+        margin-bottom: 10px;
+  
+        span {
+          font-size: 14px;
+        }
+  
+        .loading {
+          width: 50px;
+          height: 50px;
+        }
+  
+        .titleQuantidade {
+          display: flex;
+          border-bottom: 1px solid #909090;
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+  
+          h2 {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .containerDetails {
+    min-width: 500px;
+    width: 40%;
+    position: absolute;
+    z-index: 98;
+    height: 480px;
+    overflow: hidden;
+    top: 50%;
+    left: 30%;
+    
+    transform: translateY(-50%);
+  
+    .btnReturn {
+      color: #FFFFFF;
+      width: 100px;
+      z-index: 100;
+      background: #000;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      align-items: center;
+      padding: 5px;
+  
+      img {
+        rotate: 90deg;
+        margin-right: 5px;
+      }
+    }
+  
+    .btnReturn:hover {
+      background: #FFFFFF;
+      color: #000;
+    }
+    
+    .content {
+      padding: 26px;
+      background: #FFF;
+      height: 90%;
+      border-radius: 10px;
+      display:flex ;
+      flex-direction: column;
+      align-items: start;
+      
+      .details {
+        width: 100%;
+        display: flex;
+        margin-bottom: 25px;
+  
+        .detailsPlanet {
+          display: flex;
+          width: 30%;
+          flex-direction: row;
+          align-items: center;
+  
+          .PlanetImg {
+            width: 82px;
+            height: 82px;
+            margin-right: 10px;
+          }
+  
+  
+          h1 {
+            font-size: 24px;
+          }
+        }
+  
+        .boxCondition {
+          display: flex;
+          flex-direction: column;
+          align-self: flex-end;
+
+  
+          .boxTitle {
+            position: absolute;
+            left: 120px;
+            top: 60px;
+
+            h1 {
+              font-size: 24px;
+            }
+          }
+  
+          .ConditionPlanet {
+            display: flex;
+            margin: 20px 0px 00px 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            left: 100px;
+            top: -10px;
+  
+            img {
+              margin-right: 10px;
+              display: flex;
+            }
+  
+          }
+  
+          .title {
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 14px;
+          }
+        }
+      }
+  
+      .boxQuantidades {
+        background: #F1F1F1;
+        padding: 10px;
+        border-radius: 10px;
+        width: 94%;
+        margin-bottom: 10px;
+  
+        span {
+          font-size: 14px;
+        }
+  
+        .loading {
+          width: 50px;
+          height: 50px;
+        }
+  
+        .titleQuantidade {
+          display: flex;
+          border-bottom: 1px solid #909090;
+          margin-bottom: 5px;
+          padding-bottom: 5px;
+  
+          h2 {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

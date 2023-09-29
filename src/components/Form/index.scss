@@ -1,0 +1,92 @@
+.box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+
+  .text {
+    color: #FFF;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .searchBar, .btnSearch {
+    border: none;
+    height: 40px;
+    width: 80%;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .searchBar {
+    margin-top: 20px;
+  }
+
+  .searchBar::placeholder {
+    color: #7D7D7D;
+    font-size: 14px;
+  }
+
+  .btnSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DE1212;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #FFF;
+
+    img {
+      margin-right: 4px;
+    }
+  }
+
+  .btnSearch:hover {
+    border: 1px solid #FFF;
+  }
+
+  .filterContainer {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 25px;
+
+    .boxTopFilter {
+      display: flex;
+      align-items: center;
+      
+      p {
+        color: #FFF;
+        font-weight: 700;
+        margin-left: 5px;
+      }
+    }
+
+    .selects {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      select {
+        width: 100px;
+        position: absolute;
+        opacity: 0;
+        left: -8px;
+        background: #FFF;
+        border: none;
+      }
+
+      label {
+        color: #FFF;
+
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
