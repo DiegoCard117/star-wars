@@ -118,9 +118,10 @@
     align-self: flex-end;
     align-items: center;
     padding: 5px;
-    position: relative;
-    top: 75px;
+    position: absolute;
+    bottom: -55px;
     //right: -60%;
+    //outline: 1px solid red;
   
     img {
       rotate: 90deg;
@@ -153,8 +154,8 @@
     align-items: center;
     padding: 5px 5px 5px 0px;
     background: rgba(0, 0, 0, 0.678);
-    position: relative;
-    top: 140px;
+    position: absolute;
+    bottom: -50px;
     left: 80%;
 
     img {
