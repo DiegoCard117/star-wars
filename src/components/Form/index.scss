@@ -82,3 +82,9 @@
   position: relative;
   transform: translateX(-50%);
 }
+
+@media screen and (max-width: 720px){
+  .boxAlert {
+    transform: translateX(0%);
+  }
+}
