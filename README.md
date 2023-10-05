@@ -1,6 +1,6 @@
 # Star Wars Information App com Vite
 
-<img href="https://static.wikia.nocookie.net/ptstarwars/images/3/30/LogoSW.png/revision/latest/scale-to-width-down/1200?cb=20120702150758"/>
+![Star Wars](https://static.wikia.nocookie.net/ptstarwars/images/3/30/LogoSW.png/revision/latest/scale-to-width-down/1200?cb=20120702150758)
 
 ## Descrição
    Este é um aplicativo simples que permite aos usuários buscar informações sobre planetas do universo de Star Wars usando a SWAPI. O aplicativo foi desenvolvido com o Vite como bundler e o ESLint foi configurado para garantir que o código JavaScript seja limpo e consistente.
